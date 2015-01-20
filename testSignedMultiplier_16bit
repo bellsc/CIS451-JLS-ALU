@@ -50,21 +50,21 @@ BEGIN positive_noOverflow2
 ###########################
 
 BEGIN all_noOverflow1
-  INPUTS
-    InputA SIGNED(16) [lowPositive, lowNegative]
-    InputB SIGNED(16) [lowPositive, lowNegative]
-  OUTPUTS
+ INPUTS
+   InputA SIGNED(16) [lowPositive, lowNegative]
+   InputB SIGNED(16) [lowPositive, lowNegative]
+ OUTPUTS
     # Tell JLSCircuitTester to ignore value of Overflow output pin
-    Overflow EXCLUDE 
+   Overflow EXCLUDE 
 
 # Multiply some numbers above 2^8 that won't overflow
 BEGIN all_noOverflow2
-  INPUTS
-    InputA SIGNED(16) [2^14 - 1, 2^14 - 7, -2^14 + 1, -2^14 + 7]
-    InputB SIGNED(16) [0, 1, 2, 3, 6, 7, -1, -2, -3, -6, -7]
-  OUTPUTS
+ INPUTS
+   InputA SIGNED(16) [2^14 - 1, 2^14 - 7, -2^14 + 1, -2^14 + 7]
+   InputB SIGNED(16) [0, 1, 2, 3, 6, 7, -1, -2, -3, -6, -7]
+ OUTPUTS
     # Tell JLSCircuitTester to ignore value of Overflow output pin
-    Overflow EXCLUDE 
+   Overflow EXCLUDE 
 
 ###########################
 #
@@ -73,23 +73,23 @@ BEGIN all_noOverflow2
 ###########################
 
 BEGIN positive_overflow
-   INPUTS
-     InputA SIGNED(16) allPositive
-     InputB SIGNED(16) allPositive
+ INPUTS
+   InputA SIGNED(16) allPositive
+   InputB SIGNED(16) allPositive
 
 BEGIN negative_overflow_pn
-   INPUTS
-     InputA SIGNED(16) allPositive
-     InputB SIGNED(16) allNegative
+ INPUTS
+   InputA SIGNED(16) allPositive
+   InputB SIGNED(16) allNegative
 
 BEGIN negative_overflow_np
-   INPUTS
-     InputA SIGNED(16) allNegative
-     InputB SIGNED(16) allPositive
+ INPUTS
+   InputA SIGNED(16) allNegative
+   InputB SIGNED(16) allPositive
 
 BEGIN negative_overflow_nn
-   INPUTS
-     InputA SIGNED(16) allNegative
-     InputB SIGNED(16) allNegative
+  INPUTS
+    InputA SIGNED(16) allNegative
+    InputB SIGNED(16) allNegative
 
 
